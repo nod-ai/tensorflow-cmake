@@ -1,0 +1,11 @@
+[build-system]
+requires = [
+    "wheel",
+    "setuptools",
+    "cmake_build_extension",
+    "tensorflow",
+]
+build-backend = "setuptools.build_meta"
+
+[tool.black]
+line-length = 88

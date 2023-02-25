@@ -1,0 +1,13 @@
+set(TF_SRC "@TF_SRC@")
+set(TF_BIN "@TF_BIN@")
+set(CMAKE_INSTALL_PREFIX "@CMAKE_INSTALL_PREFIX@")
+set(Python3_EXECUTABLE "@Python3_EXECUTABLE@")
+set(SRC_DIR "@SRC_DIR@")
+set(CMAKE_EXECUTE_PROCESS_COMMAND_ECHO STDOUT)
+execute_process(
+    COMMAND "${Python3_EXECUTABLE}" "${SRC_DIR}/install.py"
+    "--tf_src=${TF_SRC}"
+    "--tf_bin=${TF_BIN}"
+    "--install_prefix=${CMAKE_INSTALL_PREFIX}"
+    COMMAND_ERROR_IS_FATAL ANY
+)
